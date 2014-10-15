@@ -34,7 +34,7 @@ id에는 각 패킷의 id값을 넣어야 함.
 
 
 요청/응답 예제
-```C++
+```
 요청 - user_id가 'user' user_pw가 'asdf1234'인 login_request패킷
 응답 - result에는 1, user_nickname에 'pjc0247'이 들어있는 login_response패킷
 
