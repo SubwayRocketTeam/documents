@@ -27,7 +27,10 @@ struct bar : header{ /* id : 4 */
 ```
 
 header의 size에는 sizeof(packet)을,
+
+
 id에는 각 패킷의 id값을 넣어야 함.
+
 
 
 요청/응답 예제
