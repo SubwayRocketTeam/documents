@@ -1,5 +1,5 @@
 require 'eventmachine'
-
+ 
 class Packet
 	def initialize
 		self.class.items.each do |item|
