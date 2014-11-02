@@ -11,9 +11,7 @@ unit->runAnimation(anim) {
 			// 다른 애니메이션이 재생중이라면 stopAnimation 하고 재생
 			stopAnimtion(id) if part_animation != playing_animation[id]
 			// Animation은 1회용 또는 무한반복
-			anim->runAnimationPart(part, id) {
-				part->runAction(Animate(part_animation[id]))
-			}
+			part->runAction(Animate(part_animation))
 		}
 	}
 }
@@ -30,15 +28,6 @@ unit->stopAllAnimation() {
 		stopAnimation(1..id)
 	}
 }
-```
-
-```
-class Unit < Sprite
-	function runAnimation(bodyAnim)
-	function stopAllAnimation()
-
-	Body body
-end
 ```
 
 ```
