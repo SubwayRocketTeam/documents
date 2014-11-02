@@ -34,15 +34,19 @@ unit->stopAllAnimation() {
 
 ```
 class Unit < Sprite
-	Body body
+	function runAnimation(bodyAnim)
+	function stopAllAnimation()
 
-	function runAnimation()
-	function stopAnimation()
+	Body body
 end
 ```
 
 ```
 class Body < Sprite
+	function runAnimation(bodyAnim)
+	function stopAnimation(id)
+	function stopAllAnimation()
+
 	Sprite[] parts
 	Sprite[] original_parts
 	Animation[] playing_animation;
@@ -51,14 +55,15 @@ end
 
 ```
 class BodyAnimation < Ref
-	function create(filename)
-	function init(filename)
+	function create(filename, parts, frame)
+	function init(filename, parts, frame)
 		for i in parts
 			for j in 1..frame
-				part_animation[i]->addSpriteFrame("filename_j_i");
+				part_animation[i]->addSpriteFrame("{filename}_{j}_{i}.png");
 			end
 		end
 	end
+	function getPartAnimation(id)
 
 	Animation[] part_animation
 end
